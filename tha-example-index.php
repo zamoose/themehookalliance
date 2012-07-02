@@ -17,5 +17,16 @@
 
 	<?php tha_content_bottom(); ?>
 	</div><!-- #content -->
+	
+	<?php tha_sidebars_before(); ?>
+	<div id="sidebar">
+	
+	</div><!-- #sidebar-->
+	<?php tha_sidebars_after(); ?>
+	
+	<div id="footer">
+	
+	</div><!-- #footer -->
+	
 </body>
 </html>
