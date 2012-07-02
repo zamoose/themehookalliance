@@ -16,3 +16,5 @@ There have been [discussions](http://www.wptavern.com/forum/themes-templates/494
 	* Hooks placed at the very *beginning* of a block should use `_top`.
 	* Hooks placed at the very *end* of a block should use `_bottom`.
 * If the theme section covered by a hook can contain multiple semantic elements, it should be pluralized. (Primarily applies to `tha_sidebars_before/after` in the early goings.)
+
+## Core Compatibility ##
