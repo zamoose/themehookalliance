@@ -1,6 +1,6 @@
 # Theme Hook Alliance #
 
-## What? ## 
+## What? ##
 Child theme authors and plugin developers need a consistent set of entry points to allow for easy customization and altering of functionality. Core WordPress offers a suite of [action hooks](http://codex.wordpress.org/Plugin_API/Action_Reference/) and [template tags](http://codex.wordpress.org/Template_tags) but does not cover many of the common use cases. The Theme Hook Alliance is a community-driven effort to agree on a set of third-party action hooks that THA themes pledge to implement in order to give that desired consistency.
 
 ## Why? ##
