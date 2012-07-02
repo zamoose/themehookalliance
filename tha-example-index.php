@@ -19,6 +19,24 @@
 	<div id="content">
 	<?php tha_content_top(); ?>
 
+		<!-- This roughly encapsulates The Loop portion of the layout -->
+		<?php tha_entry_before(); ?>
+		<div class="entry">
+			<?php tha_entry_top(); ?>
+			<h2>This is the title</h2>
+			<div class="itemtext">
+				Lorem ipsum and all that rot.
+			</div><!-- .itemtext -->
+			<?php tha_entry_bottom(); ?>
+		</div>
+		<?php tha_entry_after(); ?>
+		<!-- Close The Loop -->
+		
+		<?php tha_comments_before(); ?>
+		
+		<!-- comments_form() or similar goes here -->
+		
+		<?php tha_comments_after(); ?>
 	<?php tha_content_bottom(); ?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>

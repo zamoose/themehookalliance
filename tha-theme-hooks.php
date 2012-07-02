@@ -3,6 +3,8 @@
 * Theme Hook Alliance hook stub list.
 *
 * @package 		themehookalliance
+* @version		1.0-draft
+* @since		1.0-draft
 * @license		http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License, v2 (or newer)
 *
 * This program is free software; you can redistribute it and/or modify
@@ -21,6 +23,10 @@
  * declares itself to support THA hooks. 
  */
 define( 'THA_HOOKS_SUPPORT', true );
+/**
+ * Define the version of THA support, in case that becomes useful down the road.
+ */
+define( 'THA_HOOKS_VERSION', '1.0-draft')
 /**
  * If/when WordPress Core implements similar methodology, themes and plugins will be
  * able to check whether the version of THA supplied by the theme supports Core
@@ -76,6 +82,36 @@ function tha_content_top() {
 
 function tha_content_bottom() {
 	do_action( 'tha_content_bottom' );
+}
+
+/**
+* Semantic <entry> hooks
+*/
+function tha_entry_before() {
+	do_action( 'tha_entry_before' );
+}
+
+function tha_entry_after() {
+	do_action( 'tha_entry_after' );
+}
+
+function tha_entry_top() {
+	do_action( 'tha_entry_top' );
+}
+
+function tha_entry_bottom() {
+	do_action( 'tha_entry_bottom' );
+}
+
+/**
+* Comments block hooks
+*/
+function tha_comments_before() {
+	do_action( 'tha_comments_before' );
+}
+
+function tha_comments_after() {
+	do_action( 'tha_comments_after' );
 }
 
 /**
