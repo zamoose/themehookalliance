@@ -53,6 +53,7 @@ function tha_head_top() {
 function tha_head_bottom() {
 	do_action( 'tha_head_bottom' );
 }
+add_action( 'wp_head', 'tha_head_bottom', 99999 );
 
 
 /**
@@ -164,6 +165,7 @@ function tha_footer_before() {
 function tha_footer_after() {
 	do_action( 'tha_footer_after' );
 }
+add_action( 'wp_footer', 'tha_footer_after', 99999 );
 
 function tha_footer_top() {
 	do_action( 'tha_footer_top' );
