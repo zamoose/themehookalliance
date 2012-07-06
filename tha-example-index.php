@@ -2,7 +2,6 @@
 <head>
 	<?php tha_head_top(); ?>
 	<title>This is an example page</title>
-	<?php tha_head_bottom(); ?>
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -65,6 +64,6 @@
 		
 		<?php tha_footer_bottom(); ?>
 	</div><!-- #footer -->
-	<?php tha_footer_after(); ?>
+	<?php wp_footer(); ?>
 </body>
 </html>
