@@ -66,5 +66,6 @@
 		<?php tha_footer_bottom(); ?>
 	</div><!-- #footer -->
 	<?php tha_footer_after(); ?>
+	<?php wp_footer(); ?>
 </body>
 </html>
