@@ -21,7 +21,7 @@
 /**
  * Define the version of THA support, in case that becomes useful down the road.
  */
-define( 'THA_HOOKS_VERSION', '1.0-draft')
+define( 'THA_HOOKS_VERSION', '1.0-draft' );
 
 /** 
  * Themes and Plugins can check for tha_hooks using current_theme_supports( 'tha_hooks', $hook ) to determine 
