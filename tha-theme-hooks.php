@@ -24,10 +24,36 @@
 define( 'THA_HOOKS_VERSION', '1.0-draft' );
 
 /** 
- * Themes and Plugins can check for tha_hooks using current_theme_supports( 'tha_hooks', $hook ) to determine 
- * whether a theme declares itself to support this specific hook type.
+ * Themes and Plugins can check for tha_hooks using current_theme_supports( 'tha_hooks', $hook )
+ * to determine whether a theme declares itself to support this specific hook type.
+ * 
+ * Example:
+ * <code>
+ * 		// Declare support for all hook types
+ * 		add_theme_support( 'tha_hooks', array( 'all' ) );
+ * 
+ * 		// Declare support for certain hook types only
+ * 		add_theme_support( 'tha_hooks', array( 'header', 'content', 'footer' ) );
+ * </code>
  */
 add_theme_support( 'tha_hooks', array(
+	
+	/**
+	 * As a Theme developer, use the 'all' parameter, to declare support for all
+	 * hook types.
+	 * Please make sure you then actually reference all the hooks in this file,
+	 * Plugin developers depend on it!
+	 */
+	'all',
+	
+	/**
+	 * Themes can also choose to only support certain hook types.
+	 * Please make sure you then actually reference all the hooks in this type
+	 * family.
+	 * 
+	 * When the 'all' parameter was set, specific hook types do not need to be
+	 * added explicitly.
+	 */
 	'head',
 	'header',
 	'content',
@@ -38,9 +64,9 @@ add_theme_support( 'tha_hooks', array(
 	'footer',
 	
 	/**
-	 * If/when WordPress Core implements similar methodology, themes and plugins will be
-	 * able to check whether the version of THA supplied by the theme supports Core
-	 * hooks.
+	 * If/when WordPress Core implements similar methodology, Themes and Plugins
+	 * will be able to check whether the version of THA supplied by the theme
+	 * supports Core hooks.
 	 */
 //	'core'
 ) );
@@ -48,9 +74,14 @@ add_theme_support( 'tha_hooks', array(
 /**
  * Determines, whether the specific hook type is actually supported.
  * 
- * Usage:
- * if ( current_theme_supports( 'tha_hooks', 'header' ) )
- * 	  add_action( 'tha_head_top', 'prefix_header_top' );	
+ * Plugin developers should always check for the support of a <strong>specific</strong>
+ * hook type before hooking a callback function to a hook of this type.
+ * 
+ * Example:
+ * <code>
+ * 		if ( current_theme_supports( 'tha_hooks', 'header' ) )
+ * 	  		add_action( 'tha_head_top', 'prefix_header_top' );	
+ * </code>
  * 
  * @param bool $bool true
  * @param array $args The hook type being checked
@@ -59,7 +90,7 @@ add_theme_support( 'tha_hooks', array(
  * @return bool
  */
 function tha_current_theme_supports( $bool, $args, $registered ) {
-	return in_array( $args[0], $registered[0] );
+	return in_array( $args[0], $registered[0] ) || in_array( 'all', $registered[0] );
 }
 add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10, 3 );
 
