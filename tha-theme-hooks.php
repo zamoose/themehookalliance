@@ -18,28 +18,50 @@
 * GNU General Public License for more details.
 */
 
-/** 
- * Themes and plugins can check for tha_hooks using current_theme_supports( 'tha_hooks' ) to determine 
- * whether a theme declares itself to support THA hooks.
- * 
- * We can further break down support by semantic type using an array as the second parameter.
- * E.g., add_theme_support( 'tha_hooks', $tha_supports ). Check below for nomenclature.
- *
- * No second parameter == supports ALL THA hooks. 
- */
-add_theme_support( 'tha_hooks' );
 /**
  * Define the version of THA support, in case that becomes useful down the road.
  */
-define( 'THA_HOOKS_VERSION', '1.0-draft')
-/**
- * If/when WordPress Core implements similar methodology, themes and plugins will be
- * able to check whether the version of THA supplied by the theme supports Core
- * hooks.
- *
- * $tha_supports[] = 'core';
+define( 'THA_HOOKS_VERSION', '1.0-draft' );
+
+/** 
+ * Themes and Plugins can check for tha_hooks using current_theme_supports( 'tha_hooks', $hook ) to determine 
+ * whether a theme declares itself to support this specific hook type.
  */
-define( 'THA_CORE_SUPPORT', false );
+add_theme_support( 'tha_hooks', array(
+	'head',
+	'header',
+	'content',
+	'entry',
+	'comments',
+	'sidebars',
+	'sidebar',
+	'footer',
+	
+	/**
+	 * If/when WordPress Core implements similar methodology, themes and plugins will be
+	 * able to check whether the version of THA supplied by the theme supports Core
+	 * hooks.
+	 */
+//	'core'
+) );
+
+/**
+ * Determines, whether the specific hook type is actually supported.
+ * 
+ * Usage:
+ * if ( current_theme_supports( 'tha_hooks', 'header' ) )
+ * 	  add_action( 'tha_head_top', 'prefix_header_top' );	
+ * 
+ * @param bool $bool true
+ * @param array $args The hook type being checked
+ * @param array $registered All registered hook types
+ * 
+ * @return bool
+ */
+function tha_current_theme_supports( $bool, $args, $registered ) {
+	return in_array( $args[0], $registered[0] );
+}
+add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10, 3 );
 
 /**
 * HTML <head> hooks
