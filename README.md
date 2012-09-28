@@ -24,10 +24,12 @@ If this idea gains enough traction, there is a chance that a partial, or even fu
 
 For example, if Core were to introduce a `before_header()` hook, we could (in theory) simply alter `tha_header_before()` as follows
 
+```php
 	function tha_header_before() {
 		do_action( 'tha_header_before' );
 		do_action( 'before_header' );
 	}
+```
 
 This would allow all themes using the THA hooks to avoid rewriting/refactoring in the case of a Core change.
 
