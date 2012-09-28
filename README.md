@@ -52,3 +52,9 @@ This would allow all themes using the THA hooks to avoid rewriting/refactoring i
 ## Core Compatibility ##
 Working on it!
 
+## THA-Compatible Themes ##
+* **In-Progress**
+	* [Oenology](http://www.chipbennett.net/themes/oenology/) by Chip Bennett ([github](https://github.com/chipbennett/oenology))
+	* [Elbee Elgee](http://literalbarrage.org/blog/code/elbee-elgee) by Doug Stewart ([bitbucket](https://bitbucket.org/zamoose/elbee-elgee))
+* **Full Support**
+	* [The Bootstrap](http://wordpress.org/extend/themes/the-bootstrap) by Konstantin Obenland ([github](https://github.com/obenland/the-bootstrap))
