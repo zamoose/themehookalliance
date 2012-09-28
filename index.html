@@ -63,11 +63,11 @@
 
 <p>For example, if Core were to introduce a <code>before_header()</code> hook, we could (in theory) simply alter <code>tha_header_before()</code> as follows</p>
 
-<pre><code>function tha_header_before() {
-    do_action( 'tha_header_before' );
-    do_action( 'before_header' );
-}
-</code></pre>
+<div class="highlight"><pre>    <span class="k">function</span> <span class="nf">tha_header_before</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">do_action</span><span class="p">(</span> <span class="s1">'tha_header_before'</span> <span class="p">);</span>
+        <span class="nx">do_action</span><span class="p">(</span> <span class="s1">'before_header'</span> <span class="p">);</span>
+    <span class="p">}</span>
+</pre></div>
 
 <p>This would allow all themes using the THA hooks to avoid rewriting/refactoring in the case of a Core change.</p>
 
@@ -96,6 +96,29 @@
 </ol><h2>Core Compatibility</h2>
 
 <p>Working on it!</p>
+
+<h2>THA-Compatible Themes</h2>
+
+<ul>
+<li>
+<strong>In-Progress</strong>
+
+<ul>
+<li>
+<a href="http://www.chipbennett.net/themes/oenology/">Oenology</a> by Chip Bennett (<a href="https://github.com/chipbennett/oenology">github</a>)</li>
+<li>
+<a href="http://literalbarrage.org/blog/code/elbee-elgee">Elbee Elgee</a> by Doug Stewart (<a href="https://bitbucket.org/zamoose/elbee-elgee">bitbucket</a>)</li>
+</ul>
+</li>
+<li>
+<strong>Full Support</strong>
+
+<ul>
+<li>
+<a href="http://wordpress.org/extend/themes/the-bootstrap">The Bootstrap</a> by Konstantin Obenland (<a href="https://github.com/obenland/the-bootstrap">github</a>)</li>
+</ul>
+</li>
+</ul>
         </section>
 
         <footer>
