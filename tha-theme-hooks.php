@@ -54,6 +54,7 @@ add_theme_support( 'tha_hooks', array(
 	 * When the 'all' parameter was set, specific hook types do not need to be
 	 * added explicitly.
 	 */
+	'html',
 	'body',
 	'head',
 	'header',
