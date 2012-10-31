@@ -1,4 +1,4 @@
-<html>
+<?php tha_html_before(); ?><html>
 <head>
 	<?php tha_head_top(); ?>
 	<title><?php wp_title(); ?></title>
@@ -7,7 +7,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
+<?php tha_body_top(); ?>
 	<?php tha_header_before(); ?>
 	<div id="header">
 		<?php tha_header_top(); ?>
@@ -69,5 +69,6 @@
 	</div><!-- #footer -->
 	<?php tha_footer_after(); ?>
 	<?php wp_footer(); ?>
+	<?php tha_body_bottom(); ?>
 </body>
 </html>

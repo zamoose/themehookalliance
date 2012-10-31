@@ -54,6 +54,7 @@ add_theme_support( 'tha_hooks', array(
 	 * When the 'all' parameter was set, specific hook types do not need to be
 	 * added explicitly.
 	 */
+	'body',
 	'head',
 	'header',
 	'content',
@@ -95,6 +96,26 @@ function tha_current_theme_supports( $bool, $args, $registered ) {
 add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10, 3 );
 
 /**
+ * HTML <html> hook
+ * Special case, useful for <DOCTYPE>, etc.
+ * $tha_supports[] = 'html;
+ */
+ function tha_html_before() {
+	 do_action( 'tha_html_before' );
+ }
+/**
+ * HTML <body> hooks
+ * $tha_supports[] = 'body';
+ */
+ function tha_body_top() {
+	 do_action( 'tha_body_top' );
+ }
+
+ function tha_body_bottom() {
+	 do_action( 'tha_body_bottom' );
+ }
+ 
+/**
 * HTML <head> hooks
 * 
 * $tha_supports[] = 'head';
@@ -106,7 +127,6 @@ function tha_head_top() {
 function tha_head_bottom() {
 	do_action( 'tha_head_bottom' );
 }
-
 
 /**
 * Semantic <header> hooks
