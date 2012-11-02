@@ -112,9 +112,11 @@ add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10
 	 do_action( 'tha_body_top' );
  }
 
- function tha_body_bottom() {
-	 do_action( 'tha_body_bottom' );
- }
+function tha_body_bottom() {
+	if ( current_theme_supports( 'tha_hooks', 'body' ) && ! did_action( 'tha_body_bottom' ) )
+		do_action( 'tha_body_bottom' );
+}
+add_action( 'wp_footer', 'tha_body_bottom', 1 );
  
 /**
 * HTML <head> hooks
@@ -126,8 +128,10 @@ function tha_head_top() {
 }
 
 function tha_head_bottom() {
-	do_action( 'tha_head_bottom' );
+	if ( current_theme_supports( 'tha_hooks', 'body' ) && ! did_action( 'tha_head_bottom' ) )
+		do_action( 'tha_head_bottom' );
 }
+add_action( 'wp_head', 'tha_head_bottom', 1 );
 
 /**
 * Semantic <header> hooks
