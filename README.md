@@ -62,3 +62,4 @@ Working on it!
 	* [The Bootstrap](http://wordpress.org/extend/themes/the-bootstrap) by Konstantin Obenland ([github](https://github.com/obenland/the-bootstrap))
 	* [hook_s](https://github.com/bradp/hook_s) by Brad Parbs ([github](https://github.com/bradp/hook_s))
 	* [Documentation](https://github.com/bueltge/Documentation) by Frank Bültge
+	* [Opus Primus](http://wordpress.org/extend/themes/opus-primus) (via a Stanza) by Cais ([github](https://github.com/Cais/opusprimus))
