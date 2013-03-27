@@ -56,11 +56,10 @@ Working on it!
 
 ## THA-Compatible Themes ##
 * **In-Progress**
-	* [Oenology](http://www.chipbennett.net/themes/oenology/) by Chip Bennett ([github](https://github.com/chipbennett/oenology))
 	* [Elbee Elgee](http://literalbarrage.org/blog/code/elbee-elgee) by Doug Stewart ([bitbucket](https://bitbucket.org/zamoose/elbee-elgee))
 * **Full Support**
 	* [The Bootstrap](http://wordpress.org/extend/themes/the-bootstrap) by Konstantin Obenland ([github](https://github.com/obenland/the-bootstrap))
 	* [hook_s](https://github.com/bradp/hook_s) by Brad Parbs ([github](https://github.com/bradp/hook_s))
 	* [Documentation](https://github.com/bueltge/Documentation) by Frank Bültge
 	* [Opus Primus](http://wordpress.org/extend/themes/opus-primus) (via a Stanza) by Cais ([github](https://github.com/Cais/opus-primus))
-
+	* [Oenology](http://www.chipbennett.net/themes/oenology/) by Chip Bennett ([github](https://github.com/chipbennett/oenology))
