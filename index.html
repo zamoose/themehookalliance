@@ -31,21 +31,26 @@
         <hr>
 
         <section id="main_content">
-          <h1>Theme Hook Alliance</h1>
+          <h1>
+<a name="theme-hook-alliance" class="anchor" href="#theme-hook-alliance"><span class="octicon octicon-link"></span></a>Theme Hook Alliance</h1>
 
-<h2>Status</h2>
+<h2>
+<a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>Status</h2>
 
 <p><strong>1.0</strong></p>
 
-<h2>What?</h2>
+<h2>
+<a name="what" class="anchor" href="#what"><span class="octicon octicon-link"></span></a>What?</h2>
 
 <p>Child theme authors and plugin developers need a consistent set of entry points to allow for easy customization and altering of functionality. Core WordPress offers a suite of <a href="http://codex.wordpress.org/Plugin_API/Action_Reference/">action hooks</a> and <a href="http://codex.wordpress.org/Template_tags">template tags</a> but does not cover many of the common use cases. The Theme Hook Alliance is a community-driven effort to agree on a set of third-party action hooks that THA themes pledge to implement in order to give that desired consistency.</p>
 
-<h2>Why?</h2>
+<h2>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h2>
 
 <p>There have been <a href="http://www.wptavern.com/forum/themes-templates/494-standard-theme-hook-names.html">discussions</a> about implementing a common set of hooks, a <a href="http://core.trac.wordpress.org/ticket/18561#comment:92">Trac ticket</a> and even an <a href="http://codex.wordpress.org/User_talk:Dcole07">initial pass</a> at implementing something similar. However, for whatever reason[s], these efforts have not gained traction. I proposed this third-party solution <a href="http://literalbarrage.org/blog/2012/06/29/wordpress-theme-hook-alliance">here</a> and this project is intended to be an implementation of these goals.</p>
 
-<h2>What about WordPress?</h2>
+<h2>
+<a name="what-about-wordpress" class="anchor" href="#what-about-wordpress"><span class="octicon octicon-link"></span></a>What about WordPress?</h2>
 
 <p>As stated above, there have been attempts to have something along these lines added to WordPress Core in the past and, while they have generally been seen as good ideas, they have remained as such.</p>
 
@@ -53,11 +58,13 @@
 
 <p>However, this is no reason to wait. Child themes have recently been approved for release in the official <a href="http://wordpress.org/extend/themes">Themes Repository</a> and plugin authors continue to need more reliable entry points into WordPress' content flow so as to avoid nasty hacks like output buffering.</p>
 
-<h3>When Core does it, Core wins</h3>
+<h3>
+<a name="when-core-does-it-core-wins" class="anchor" href="#when-core-does-it-core-wins"><span class="octicon octicon-link"></span></a>When Core does it, Core wins</h3>
 
 <p>A small note: none of the proposed theme hooks are intended to replace or rewrite existing WordPress functionality. So, for instance, if a desired result can be obtained by filtering the output of e.g. <code>the_content()</code>, there is no need to create an entirely new hook. Therefore, any functions that duplicate work Core performs already should be rejected immediately.</p>
 
-<h3>What if Core adds some (or all) of these filters?</h3>
+<h3>
+<a name="what-if-core-adds-some-or-all-of-these-filters" class="anchor" href="#what-if-core-adds-some-or-all-of-these-filters"><span class="octicon octicon-link"></span></a>What if Core adds some (or all) of these filters?</h3>
 
 <p>If this idea gains enough traction, there is a chance that a partial, or even full, portion of these hooks will make their way into Core. When/if this occurs, we can simply update <code>tha-theme-hooks.php</code> to include the new <code>do_action()</code> calls at the appropriate places. Then, THA users will simply need to update their copy of <code>tha-theme-hooks.php</code> to take advantage.</p>
 
@@ -71,7 +78,8 @@
 
 <p>This would allow all themes using the THA hooks to avoid rewriting/refactoring in the case of a Core change.</p>
 
-<h2>Conventions</h2>
+<h2>
+<a name="conventions" class="anchor" href="#conventions"><span class="octicon octicon-link"></span></a>Conventions</h2>
 
 <ul>
 <li>Hooks should be of the form   <code>tha_</code> + <code>[section of the theme]</code> + <code>_[placement within block]</code>.</li>
@@ -86,18 +94,21 @@
 </ul>
 </li>
 <li>If the theme section covered by a hook can contain multiple semantic elements, it should be pluralized. (Primarily applies to <code>tha_sidebars_before/after</code> in the early goings.)</li>
-</ul><h2>Usage</h2>
+</ul><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <ol>
 <li>Copy <code>tha-theme-hooks.php</code> to a directory inside of your theme; say, <code>include/</code>, for instance.</li>
 <li>Include <code>tha-theme-hooks.php</code> via <code>&lt;?php include( 'include/tha-theme-hooks.php' ); ?&gt;</code> in your <code>functions.php</code> or similar.</li>
 <li>Using <code>tha-example-index.php</code> as a guide, <em>be sure to implement all of the hooks described in <code>tha-theme-hooks.php</code> in order to offer full compatibility</em>.</li>
 <li>Profit!</li>
-</ol><h2>Core Compatibility</h2>
+</ol><h2>
+<a name="core-compatibility" class="anchor" href="#core-compatibility"><span class="octicon octicon-link"></span></a>Core Compatibility</h2>
 
 <p>Working on it!</p>
 
-<h2>THA-Compatible Themes</h2>
+<h2>
+<a name="tha-compatible-themes" class="anchor" href="#tha-compatible-themes"><span class="octicon octicon-link"></span></a>THA-Compatible Themes</h2>
 
 <ul>
 <li>
@@ -115,6 +126,8 @@
 <li>
 <a href="http://wordpress.org/extend/themes/the-bootstrap">The Bootstrap</a> by Konstantin Obenland (<a href="https://github.com/obenland/the-bootstrap">github</a>)</li>
 <li>
+<a href="https://github.com/bradp/wolf">wolf</a> by Brad Parbs (<a href="https://github.com/bradp/wolf">github</a>)</li>
+<li>
 <a href="https://github.com/bradp/hook_s">hook_s</a> by Brad Parbs (<a href="https://github.com/bradp/hook_s">github</a>)</li>
 <li>
 <a href="https://github.com/bueltge/Documentation">Documentation</a> by Frank Bültge</li>
@@ -129,7 +142,7 @@
 
         <footer>
           Themehookalliance is maintained by <a href="https://github.com/zamoose">zamoose</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
         
