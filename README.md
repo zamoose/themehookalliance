@@ -64,3 +64,4 @@ Working on it!
 	* [Documentation](https://github.com/bueltge/Documentation) by Frank Bültge
 	* [Opus Primus](http://wordpress.org/extend/themes/opus-primus) (via a Stanza) by Cais ([github](https://github.com/Cais/opus-primus))
 	* [Oenology](http://www.chipbennett.net/themes/oenology/) by Chip Bennett ([github](https://github.com/chipbennett/oenology))
+	* [Museum Core](http://wordpress.org/extend/themes/museum-core/) by Chris Reynolds ([github](https://github.com/jazzsequence/museum-core))
