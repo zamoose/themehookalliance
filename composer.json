@@ -1,0 +1,19 @@
+{
+    "name"       : "zamoose/themehookalliance",
+    "description": "Theme Hook Alliance",
+    "keywords"   : ["wordpress"],
+    "homepage"   : "https://github.com/zamoose/themehookalliance",
+    "license"    : "GPL-2.0+",
+    "authors"    : [
+        {
+            "name"    : "Doug Stewart",
+            "homepage": "http://literalbarrage.org"
+        }
+    ],
+    "support"    : {
+        "issues": "https://github.com/zamoose/themehookalliance/issues"
+    },
+    "autoload" : {
+        "files" : ["tha-theme-hooks.php"]
+    }
+}
