@@ -68,3 +68,4 @@ Working on it!
 	* [Museum Core](http://wordpress.org/extend/themes/museum-core/) by Chris Reynolds ([github](https://github.com/jazzsequence/museum-core))
 	* [Decode](http://scotthsmith.com/projects/decode/) by Scott Smith ([github](https://github.com/ScottSmith95/Decode))
 	* [Some Like It Neat](https://github.com/digisavvy/some-like-it-neat) by Alex Vasquez
+	* [Compass](https://github.com/FlagshipWP/compass) by Flagship
