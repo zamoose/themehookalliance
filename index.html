@@ -1,67 +1,164 @@
-<!doctype html>
-<!--
-
-  Instructions:
-
-  - Save this file.
-  - Replace "USER" with your GitHub username.
-  - Replace "REPO" with your GitHub repo name.
-  - Replace "Your Project" with your project name.
-  - Upload this file (or commit to GitHub Pages).
-
-  Customize as you see fit!
-
--->
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Themehookalliance by zamoose</title>
+  </head>
 
-  <title>Theme Hook Alliance</title>
+  <body>
+    <div id="container">
+      <div class="inner">
 
-  <!-- Flatdoc -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src='http://rstacruz.github.io/flatdoc/v/0.8.2/legacy.js'></script>
-  <script src='http://rstacruz.github.io/flatdoc/v/0.8.2/flatdoc.js'></script>
+        <header>
+          <h1>Themehookalliance</h1>
+          <h2>Theme Hooks -- Let&#39;s get on it!</h2>
+        </header>
 
-  <!-- Flatdoc theme -->
-  <link  href='http://rstacruz.github.io/flatdoc/v/0.8.2/theme-white/style.css' rel='stylesheet'>
-  <script src='http://rstacruz.github.io/flatdoc/v/0.8.2/theme-white/script.js'></script>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/zamoose/themehookalliance/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/zamoose/themehookalliance/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/zamoose/themehookalliance" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-  <!-- Meta -->
-  <meta content="Theme Hook Alliance" property="og:title">
-  <meta content="You are a part of the Rebel Alliance and a traitor." name="description">
+        <hr>
 
-  <!-- Initializer -->
-  <script>
-    Flatdoc.run({
-      fetcher: Flatdoc.github('zamoose/themehookalliance')
-    });
-  </script>
-</head>
-<body role='flatdoc'>
+        <section id="main_content">
+          <h1>
+<a name="theme-hook-alliance" class="anchor" href="#theme-hook-alliance"><span class="octicon octicon-link"></span></a>Theme Hook Alliance</h1>
 
-  <div class='header'>
-    <div class='left'>
-      <h1>Theme Hook Alliance</h1>
-      <ul>
-        <li><a href='https://github.com/zamoose/themehookalliance'>View on GitHub</a></li>
-        <li><a href='https://github.com/zamoose/themehookalliance/issues'>Issues</a></li>
-      </ul>
+<h2>
+<a name="status" class="anchor" href="#status"><span class="octicon octicon-link"></span></a>Status</h2>
+
+<p><strong>1.0</strong></p>
+
+<h2>
+<a name="what" class="anchor" href="#what"><span class="octicon octicon-link"></span></a>What?</h2>
+
+<p>Child theme authors and plugin developers need a consistent set of entry points to allow for easy customization and altering of functionality. Core WordPress offers a suite of <a href="http://codex.wordpress.org/Plugin_API/Action_Reference/">action hooks</a> and <a href="http://codex.wordpress.org/Template_tags">template tags</a> but does not cover many of the common use cases. The Theme Hook Alliance is a community-driven effort to agree on a set of third-party action hooks that THA themes pledge to implement in order to give that desired consistency.</p>
+
+<h2>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h2>
+
+<p>There have been <a href="http://www.wptavern.com/forum/themes-templates/494-standard-theme-hook-names.html">discussions</a> about implementing a common set of hooks, a <a href="http://core.trac.wordpress.org/ticket/18561#comment:92">Trac ticket</a> and even an <a href="http://codex.wordpress.org/User_talk:Dcole07">initial pass</a> at implementing something similar. However, for whatever reason[s], these efforts have not gained traction. I proposed this third-party solution <a href="http://literalbarrage.org/blog/2012/06/29/wordpress-theme-hook-alliance">here</a> and this project is intended to be an implementation of these goals.</p>
+
+<h2>
+<a name="what-about-wordpress" class="anchor" href="#what-about-wordpress"><span class="octicon octicon-link"></span></a>What about WordPress?</h2>
+
+<p>As stated above, there have been attempts to have something along these lines added to WordPress Core in the past and, while they have generally been seen as good ideas, they have remained as such.</p>
+
+<p>Taking this out of the realm of Core and into the third-party realm is a bit of a risky proposition, to be sure. If the conventions laid out below are not adopted in a widespread fashion, this effort will ultimately fail.</p>
+
+<p>However, this is no reason to wait. Child themes have recently been approved for release in the official <a href="http://wordpress.org/extend/themes">Themes Repository</a> and plugin authors continue to need more reliable entry points into WordPress' content flow so as to avoid nasty hacks like output buffering.</p>
+
+<h3>
+<a name="when-core-does-it-core-wins" class="anchor" href="#when-core-does-it-core-wins"><span class="octicon octicon-link"></span></a>When Core does it, Core wins</h3>
+
+<p>A small note: none of the proposed theme hooks are intended to replace or rewrite existing WordPress functionality. So, for instance, if a desired result can be obtained by filtering the output of e.g. <code>the_content()</code>, there is no need to create an entirely new hook. Therefore, any functions that duplicate work Core performs already should be rejected immediately.</p>
+
+<h3>
+<a name="what-if-core-adds-some-or-all-of-these-filters" class="anchor" href="#what-if-core-adds-some-or-all-of-these-filters"><span class="octicon octicon-link"></span></a>What if Core adds some (or all) of these filters?</h3>
+
+<p>If this idea gains enough traction, there is a chance that a partial, or even full, portion of these hooks will make their way into Core. When/if this occurs, we can simply update <code>tha-theme-hooks.php</code> to include the new <code>do_action()</code> calls at the appropriate places. Then, THA users will simply need to update their copy of <code>tha-theme-hooks.php</code> to take advantage.</p>
+
+<p>For example, if Core were to introduce a <code>before_header()</code> hook, we could (in theory) simply alter <code>tha_header_before()</code> as follows</p>
+
+<div class="highlight highlight-php"><pre>    <span class="k">function</span> <span class="nf">tha_header_before</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">do_action</span><span class="p">(</span> <span class="s1">'tha_header_before'</span> <span class="p">);</span>
+        <span class="nx">do_action</span><span class="p">(</span> <span class="s1">'before_header'</span> <span class="p">);</span>
+    <span class="p">}</span>
+</pre></div>
+
+<p>This would allow all themes using the THA hooks to avoid rewriting/refactoring in the case of a Core change.</p>
+
+<h2>
+<a name="conventions" class="anchor" href="#conventions"><span class="octicon octicon-link"></span></a>Conventions</h2>
+
+<ul>
+<li>Hooks should be of the form   <code>tha_</code> + <code>[section of the theme]</code> + <code>_[placement within block]</code>.</li>
+<li>Hooks should be named based upon the generally-accepted semantic name for the section of a theme they cover, e.g., <code>tha_content_*</code> should refer to the section/block of a theme containing the content (or "The Loop"), while <code>tha_sidebar_*</code> would refer to the sidebars generally called by <code>get_sidebar()</code>.</li>
+<li>Hooks should be suffixed based upon their placement within a block.
+
+<ul>
+<li>Hooks immediately <em>preceding</em> a block should use <code>_before</code>.</li>
+<li>Hooks immediately <em>following</em> a block should use <code>_after</code>.</li>
+<li>Hooks placed at the very <em>beginning</em> of a block should use <code>_top</code>.</li>
+<li>Hooks placed at the very <em>end</em> of a block should use <code>_bottom</code>.</li>
+</ul>
+</li>
+<li>If the theme section covered by a hook can contain multiple semantic elements, it should be pluralized. (Primarily applies to <code>tha_sidebars_before/after</code> in the early goings.)</li>
+</ul>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<ol>
+<li>Copy <code>tha-theme-hooks.php</code> to a directory inside of your theme; say, <code>include/</code>, for instance.</li>
+<li>Include <code>tha-theme-hooks.php</code> via <code>&lt;?php include( 'include/tha-theme-hooks.php' ); ?&gt;</code> in your <code>functions.php</code> or similar.</li>
+<li>Using <code>tha-example-index.php</code> as a guide, <em>be sure to implement all of the hooks described in <code>tha-theme-hooks.php</code> in order to offer full compatibility</em>.</li>
+<li>Profit!</li>
+</ol>
+
+<h2>
+<a name="core-compatibility" class="anchor" href="#core-compatibility"><span class="octicon octicon-link"></span></a>Core Compatibility</h2>
+
+<p>Working on it!</p>
+
+<h2>
+<a name="tha-compatible-themes" class="anchor" href="#tha-compatible-themes"><span class="octicon octicon-link"></span></a>THA-Compatible Themes</h2>
+
+<ul>
+<li>
+<p><strong>In-Progress</strong></p>
+
+<ul>
+<li>
+<a href="http://literalbarrage.org/blog/code/elbee-elgee">Elbee Elgee</a> by Doug Stewart (<a href="https://bitbucket.org/zamoose/elbee-elgee">bitbucket</a>)</li>
+</ul>
+</li>
+<li>
+<p><strong>Full Support</strong></p>
+
+<ul>
+<li>
+<a href="http://wordpress.org/extend/themes/the-bootstrap">The Bootstrap</a> by Konstantin Obenland (<a href="https://github.com/obenland/the-bootstrap">github</a>)</li>
+<li>
+<a href="https://github.com/bradp/wolf">wolf</a> by Brad Parbs (<a href="https://github.com/bradp/wolf">github</a>)</li>
+<li>
+<a href="https://github.com/bradp/hook_s">hook_s</a> by Brad Parbs (<a href="https://github.com/bradp/hook_s">github</a>)</li>
+<li>
+<a href="https://github.com/bueltge/Documentation">Documentation</a> by Frank Bültge</li>
+<li>
+<a href="http://wordpress.org/extend/themes/opus-primus">Opus Primus</a> (via a Stanza) by Cais (<a href="https://github.com/Cais/opus-primus">github</a>)</li>
+<li>
+<a href="http://www.chipbennett.net/themes/oenology/">Oenology</a> by Chip Bennett (<a href="https://github.com/chipbennett/oenology">github</a>)</li>
+<li>
+<a href="http://wordpress.org/extend/themes/museum-core/">Museum Core</a> by Chris Reynolds (<a href="https://github.com/jazzsequence/museum-core">github</a>)</li>
+<li>
+<a href="http://scotthsmith.com/projects/decode/">Decode</a> by Scott Smith (<a href="https://github.com/ScottSmith95/Decode">github</a>)</li>
+<li>
+<a href="https://github.com/digisavvy/some-like-it-neat">Some Like It Neat</a> by Alex Vasquez</li>
+<li>
+<a href="https://github.com/FlagshipWP/compass">Compass</a> by Flagship</li>
+</ul>
+</li>
+</ul>
+        </section>
+
+        <footer>
+          Themehookalliance is maintained by <a href="https://github.com/zamoose">zamoose</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-    <div class='right'>
-      <!-- GitHub buttons: see http://ghbtns.com -->
-      <iframe src="http://ghbtns.com/github-btn.html?user=zamoose&amp;repo=themehookalliance&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-    </div>
-  </div>
-
-  <div class='content-root'>
-    <div class='menubar'>
-      <div class='menu section' role='flatdoc-menu'></div>
-    </div>
-    <div role='flatdoc-content' class='content'></div>
-  </div>
-
-</body>
+  </body>
 </html>
