@@ -22,7 +22,7 @@ A small note: none of the proposed theme hooks are intended to replace or rewrit
 ### What if Core adds some (or all) of these filters? ###
 If this idea gains enough traction, there is a chance that a partial, or even full, portion of these hooks will make their way into Core. When/if this occurs, we can simply update `tha-theme-hooks.php` to include the new `do_action()` calls at the appropriate places. Then, THA users will simply need to update their copy of `tha-theme-hooks.php` to take advantage.
 
-For example, if Core were to introduce a `before_header()` hook, we could (in theory) simply alter `tha_header_before()` as follows
+For example, if Core were to introduce a `before_header` hook, we could (in theory) simply alter `tha_header_before` as follows
 
 ```php
 	function tha_header_before() {
