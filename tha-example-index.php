@@ -23,6 +23,9 @@
 
 		<!-- This roughly encapsulates The Loop portion of the layout -->
 		<?php if ( have_posts() ) : ?>
+
+			<?php tha_content_while_before(); ?>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php tha_entry_before(); ?>
@@ -41,7 +44,7 @@
 
 			<?php endwhile; ?>
 
-			<?php tha_content_endwhile_after(); ?>
+			<?php tha_content_while_after(); ?>
 
 		<?php endif; ?>
 		<!-- Close The Loop -->

@@ -171,8 +171,12 @@ function tha_content_bottom() {
 	do_action( 'tha_content_bottom' );
 }
 
-function tha_content_endwhile_after() {
-	do_action( 'tha_content_endwhile_after' );
+function tha_content_while_before() {
+	do_action( 'tha_content_while_before' );
+}
+
+function tha_content_while_after() {
+	do_action( 'tha_content_while_after' );
 }
 
 /**
