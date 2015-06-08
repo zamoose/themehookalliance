@@ -70,7 +70,7 @@ add_theme_support( 'tha_hooks', array(
 	 * will be able to check whether the version of THA supplied by the theme
 	 * supports Core hooks.
 	 */
-//	'core',
+	//'core',
 ) );
 
 /**
@@ -171,6 +171,10 @@ function tha_content_bottom() {
 	do_action( 'tha_content_bottom' );
 }
 
+function tha_content_endwhile_after() {
+	do_action( 'tha_content_endwhile_after' );
+}
+
 /**
  * Semantic <entry> hooks
  *
@@ -186,6 +190,10 @@ function tha_entry_after() {
 
 function tha_entry_top() {
 	do_action( 'tha_entry_top' );
+}
+
+function tha_entry_content() {
+	do_action( 'tha_entry_content' );
 }
 
 function tha_entry_bottom() {
