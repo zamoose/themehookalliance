@@ -34,7 +34,9 @@
 					<?php tha_entry_top(); ?>
 					<h2><?php the_title(); ?></h2>
 					<div class="itemtext">
+						<?php tha_entry_content_before(); ?>
 						<?php the_content(); ?>
+						<?php tha_entry_content_after(); ?>
 					</div><!-- .itemtext -->
 					<?php tha_entry_bottom(); ?>
 				</div>

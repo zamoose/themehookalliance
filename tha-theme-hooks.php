@@ -192,6 +192,14 @@ function tha_entry_after() {
 	do_action( 'tha_entry_after' );
 }
 
+function tha_entry_content_before() {
+	do_action( 'tha_entry_content_before' );
+}
+
+function tha_entry_content_after() {
+	do_action( 'tha_entry_content_after' );
+}
+
 function tha_entry_top() {
 	do_action( 'tha_entry_top' );
 }
