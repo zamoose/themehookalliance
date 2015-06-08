@@ -196,10 +196,6 @@ function tha_entry_top() {
 	do_action( 'tha_entry_top' );
 }
 
-function tha_entry_content() {
-	do_action( 'tha_entry_content' );
-}
-
 function tha_entry_bottom() {
 	do_action( 'tha_entry_bottom' );
 }
