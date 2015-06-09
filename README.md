@@ -69,3 +69,4 @@ Working on it!
 	* [Decode](http://scotthsmith.com/projects/decode/) by Scott Smith ([github](https://github.com/ScottSmith95/Decode))
 	* [Some Like It Neat](https://github.com/digisavvy/some-like-it-neat) by Alex Vasquez
 	* [Compass](https://github.com/FlagshipWP/compass) by Flagship
+	* [Tiny Framework](https://wordpress.org/themes/tiny-framework/) by Tomas Mackevicius
