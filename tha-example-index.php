@@ -22,24 +22,34 @@
 		<?php tha_content_top(); ?>
 
 		<!-- This roughly encapsulates The Loop portion of the layout -->
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : ?>
 
-			<?php tha_entry_before(); ?>
-			<!-- Post Entry Begin -->
-			<div <?php post_class( 'entry' ); ?>>
-				<?php tha_entry_top(); ?>
-				<h2><?php the_title(); ?></h2>
-				<div class="itemtext">
-					<?php the_content(); ?>
-				</div><!-- .itemtext -->
-				<?php tha_entry_bottom(); ?>
-			</div>
-			<!-- Post Entry End -->
-			<?php tha_entry_after(); ?>
+			<?php tha_content_while_before(); ?>
 
-		<?php endwhile; endif; ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<?php tha_entry_before(); ?>
+				<!-- Post Entry Begin -->
+				<div <?php post_class( 'entry' ); ?>>
+					<?php tha_entry_top(); ?>
+					<h2><?php the_title(); ?></h2>
+					<div class="itemtext">
+						<?php tha_entry_content_before(); ?>
+						<?php the_content(); ?>
+						<?php tha_entry_content_after(); ?>
+					</div><!-- .itemtext -->
+					<?php tha_entry_bottom(); ?>
+				</div>
+				<!-- Post Entry End -->
+				<?php tha_entry_after(); ?>
+
+			<?php endwhile; ?>
+
+			<?php tha_content_while_after(); ?>
+
+		<?php endif; ?>
 		<!-- Close The Loop -->
-		
+
 		<?php tha_comments_before(); ?>
 		<!-- Post Comments Begin -->
 		<?php comments_template(); ?>
@@ -49,7 +59,7 @@
 		<?php tha_content_bottom(); ?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>
-	
+
 	<?php tha_sidebars_before(); ?>
 	<div id="sidebar">
 		<?php tha_sidebar_top(); ?>
@@ -57,14 +67,14 @@
 		<?php tha_sidebar_bottom(); ?>
 	</div><!-- #sidebar-->
 	<?php tha_sidebars_after(); ?>
-	
+
 	<?php tha_footer_before(); ?>
 	<div id="footer">
 		<?php tha_footer_top(); ?>
-		
+
 		<h3>Footer</h3>
 		<p>This is some sample footer text.</p>
-		
+
 		<?php tha_footer_bottom(); ?>
 	</div><!-- #footer -->
 	<?php tha_footer_after(); ?>
