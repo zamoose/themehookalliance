@@ -99,7 +99,7 @@ add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10
 /**
  * HTML <html> hook
  * Special case, useful for <DOCTYPE>, etc.
- * $tha_supports[] = 'html;
+ * $tha_supports[] = 'html';
  */
 function tha_html_before() {
 	do_action( 'tha_html_before' );
