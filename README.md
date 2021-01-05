@@ -70,3 +70,4 @@ Working on it!
 	* [Some Like It Neat](https://github.com/digisavvy/some-like-it-neat) by Alex Vasquez
 	* [Compass](https://github.com/FlagshipWP/compass) by Flagship
 	* [Tiny Framework](https://wordpress.org/themes/tiny-framework/) by Tomas Mackevicius
+	* [Trellis](https://www.mediavine.com/products/trellis/) by Mediavine
